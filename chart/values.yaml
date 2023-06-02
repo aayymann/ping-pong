@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: aayman1
+  name: ping-pong
+
+service:
+  port: 5000
+  name: http
+
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: "true"
+  paths:
+    - path: /api
+      pathType: Prefix
+
+autoscaling:
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
