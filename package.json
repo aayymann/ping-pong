@@ -1,0 +1,19 @@
+{
+	"name": "ping-pong",
+	"version": "1.0.0",
+	"description": "Simple ping-pong app ",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon src/index.js",
+		"start": "node src/index.js"
+	},
+	"author": "Ahmed Ayman",
+	"license": "ISC",
+	"dependencies": {
+		"babel": "^6.23.0",
+		"body-parser": "^1.20.2",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"nodemon": "^2.0.22"
+	}
+}
